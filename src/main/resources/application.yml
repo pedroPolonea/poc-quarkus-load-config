@@ -1,0 +1,25 @@
+greeting:
+  message: "hello"
+
+rabbitmq:
+  url: localhost:5672
+  vhost: /test
+  username: guest
+  password: guest
+  exchanges:
+    exchange[0]:
+      name: order
+      type: topic
+      auto-delete: false
+      number-consumers: 3
+      number-retries: 3
+      redelivery-delay: 3000
+      maximum-redeliveries: -1
+    exchange[1]:
+      name: order2
+      type: topic
+      auto-delete: false
+      number-consumers: 3
+      number-retries: 3
+      redelivery-delay: 3000
+      maximum-redeliveries: -1
