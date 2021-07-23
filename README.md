@@ -1,0 +1,1 @@
+# poc-quarkus-load-config
